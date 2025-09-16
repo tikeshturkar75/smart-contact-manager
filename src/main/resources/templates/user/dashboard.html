@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  th:replace="~{base :: parent(~{::#content},~{::title},~{::script})}"
+>
+  <head>
+    <title data-th-text="${loggedInUser.name}+' |  Dashboard'">
+      Profile Page
+    </title>
+  </head>
+  <body>
+    <div id="content">
+      <!-- sidebar -->
+
+      <!-- user is logged in : sidebar -->
+
+      <div th:if="${loggedInUser}">
+        <div data-th-replace="~{user/sidebar :: sidebar}"></div>
+      </div>
+
+      <div class="sm:pl-64 pt-20" style="height: 1000px">
+        <div class="flex justify-center flex-col items-center">
+          <section id="dashboard" class="py-20 bg-gray-200 dark:bg-gray-900">
+  <div class="max-w-7xl mx-auto px-6 lg:px-12">
+    
+    <!-- Dashboard Title -->
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-extrabold text-gray-900 dark:text-white">
+        Welcome to Your <span class="text-blue-600">Dashboard</span>
+      </h2>
+      <p class="mt-4 text-gray-600 dark:text-gray-300">
+        Get a quick overview of your contacts, activities, and updates all in one place.
+      </p>
+    </div>
+
+    <!-- Stats Cards -->
+    <div class="grid md:grid-cols-4 gap-6 mb-12">
+      <div class="bg-white dark:bg-gray-800 shadow-lg rounded-2xl p-6 text-center">
+        <h3 class="text-3xl font-bold text-blue-600" th:text="${totalContacts}">120</h3>
+        <p class="mt-2 text-gray-600 dark:text-gray-300">Total Contacts</p>
+      </div>
+      <div class="bg-white dark:bg-gray-800 shadow-lg rounded-2xl p-6 text-center">
+        <h3 class="text-3xl font-bold text-green-600" th:text="${activeUsers}">85</h3>
+        <p class="mt-2 text-gray-600 dark:text-gray-300">Active Users</p>
+      </div>
+      <div class="bg-white dark:bg-gray-800 shadow-lg rounded-2xl p-6 text-center">
+        <h3 class="text-3xl font-bold text-yellow-600" th:text="${messages}">340</h3>
+        <p class="mt-2 text-gray-600 dark:text-gray-300">Messages</p>
+      </div>
+      <div class="bg-white dark:bg-gray-800 shadow-lg rounded-2xl p-6 text-center">
+        <h3 class="text-3xl font-bold text-red-600" th:text="${alerts}">12</h3>
+        <p class="mt-2 text-gray-600 dark:text-gray-300">Alerts</p>
+      </div>
+    </div>
+
+    <!-- Two Column Layout -->
+    <div class="grid md:grid-cols-2 gap-8">
+      
+      <!-- Recent Contacts -->
+      <div class="bg-white dark:bg-gray-800 shadow-lg rounded-2xl p-6 overflow-x-auto">
+        <h3 class="text-lg font-semibold mb-4 text-gray-800 dark:text-gray-200">
+          Recent Contacts
+        </h3>
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="text-gray-600 dark:text-gray-300 border-b">
+              <th class="py-2 px-3">Name</th>
+              <th class="py-2 px-3">Email</th>
+              <th class="py-2 px-3">Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr th:each="contact : ${recentContacts}" class="border-b hover:bg-gray-100 dark:hover:bg-gray-700">
+              <td class="py-2 px-3 font-medium text-gray-800 dark:text-gray-200" th:text="${contact.name}">John Doe</td>
+              <td class="py-2 px-3 text-gray-600 dark:text-gray-300" th:text="${contact.email}">john@email.com</td>
+              <td class="py-2 px-3 text-gray-500 dark:text-gray-400" th:text="${contact.createdAt}">2025-09-15</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- User Activities -->
+      <div class="bg-white dark:bg-gray-800 shadow-lg rounded-2xl p-6">
+        <h3 class="text-lg font-semibold mb-4 text-gray-800 dark:text-gray-200">
+          Recent Activities
+        </h3>
+        <ul class="space-y-4">
+          <li th:each="activity : ${recentActivities}" class="flex items-start space-x-3">
+            <span class="text-blue-600">🔹</span>
+            <p class="text-gray-700 dark:text-gray-300" th:text="${activity}">User John added a new contact</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Action Buttons -->
+    <!-- <div class="mt-12 flex justify-center space-x-4">
+      <a href="/contacts/add" 
+         class="px-6 py-3 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition">
+        ➕ Add New Contact
+      </a>
+      <a href="/contacts/manage" 
+         class="px-6 py-3 bg-gray-600 text-white rounded-lg shadow hover:bg-gray-700 transition">
+        ⚙️ Manage Contacts
+      </a>
+      <a href="/reports" 
+         class="px-6 py-3 bg-green-600 text-white rounded-lg shadow hover:bg-green-700 transition">
+        📑 View Reports
+      </a>
+    </div> -->
+
+  </div>
+</section>
+
+        </div>
+      </div>
+    </div>
+
+    <script>
+      console.log("this is profile page");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" th:replace="~{base :: parent(~{::#content},~{::title},~{})}">
+  <head>
+  
+    <title>
+      Services
+    </title>
+  </head>
+  <body>
+    <section id="content">
+      <section id="services" class="py-20 bg-gray-100 dark:bg-gray-900">
+  <div class="max-w-6xl mx-auto px-6 lg:px-12 text-center">
+    <h2 class="text-4xl font-extrabold text-gray-900 dark:text-white mb-6">
+      Our <span class="text-blue-600">Services</span>
+    </h2>
+    <p class="text-lg text-gray-600 dark:text-gray-300 mb-12 max-w-3xl mx-auto">
+      We don’t just help you store contacts — we help you build stronger connections.  
+      Explore the services that make <strong>Contact Manager</strong> your trusted companion.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+      
+      <!-- Service 1 -->
+      <div class="p-8 bg-gray-50 dark:bg-gray-800 rounded-xl shadow hover:shadow-lg transition">
+        <div class="flex justify-center mb-4">
+          <img src="/images/contact.jpg" alt="Manage Contacts" class="w-14 h-14">
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Smart Contact Management</h3>
+        <p class="text-gray-600 dark:text-gray-300">
+          Organize, group, and update your contacts in seconds with our intuitive tools.
+        </p>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="p-8 bg-gray-50 dark:bg-gray-800 rounded-xl shadow hover:shadow-lg transition">
+        <div class="flex justify-center mb-4">
+          <img src="/images/secur.jpg" alt="Secure Data" class="w-14 h-14">
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Enterprise-Grade Security</h3>
+        <p class="text-gray-600 dark:text-gray-300">
+          Your contacts are encrypted with bank-level security — only you can access them.
+        </p>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="p-8 bg-gray-50 dark:bg-gray-800 rounded-xl shadow hover:shadow-lg transition">
+        <div class="flex justify-center mb-4">
+          <img src="/images/earth.jpg" alt="Cloud Access" class="w-14 h-14">
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Anywhere, Anytime Access</h3>
+        <p class="text-gray-600 dark:text-gray-300">
+          Access your contacts 24/7 from any device — web, tablet, or mobile — fully synchronized.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Extra Call to Action -->
+    <div class="mt-12 py-12">
+      <a href="/login" 
+         class="px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow hover:bg-blue-700 transition">
+        Get Started Today
+      </a>
+    </div>
+  </div>
+</section>
+
+    </section>
+
+  </body>
+</html>

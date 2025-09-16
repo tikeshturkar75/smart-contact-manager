@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  th:replace="~{base :: parent(~{::#content},~{::title},~{::script})}"
+>
+  <head>
+    <title>About Page</title>
+  </head>
+  <body>
+    <div id="content">
+      <section id="about" class="py-20 bg-gradient-to-r from-blue-50 to-blue-100 dark:from-gray-900 dark:to-gray-800">
+  <div class="max-w-6xl mx-auto px-6 lg:px-12">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      
+      <!-- Left Side: Image -->
+      <div class="flex justify-center">
+        <img src="/images/about.jpg" alt="About Contact Manager" 
+             class="w-96 rounded-lg shadow-lg">
+      </div>
+
+      <!-- Right Side: Content -->
+      <div>
+        <h2 class="text-4xl font-extrabold text-gray-900 dark:text-white mb-6">
+          About <span class="text-blue-600">Contact Manager</span>
+        </h2>
+        
+        <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+          Managing contacts should be simple, secure, and stress-free.  
+          That’s why we built <strong>Contact Manager</strong> — a modern tool that 
+          keeps all your professional and personal connections in one place.
+        </p>
+        
+        <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+          With features like <em>smart search, quick updates, secure storage, 
+          and cloud synchronization</em>, you’ll never lose track of your important contacts again.
+        </p>
+        
+        <ul class="list-disc pl-6 text-gray-700 dark:text-gray-300 space-y-2">
+          <li>📌 Organize and categorize contacts with ease</li>
+          <li>🔒 Bank-level security to keep your data safe</li>
+          <li>🌍 Access anytime, anywhere, on any device</li>
+          <li>⚡ Fast, responsive, and built with latest technologies</li>
+        </ul>
+
+        <div class="mt-6">
+          <a href="/services" 
+             class="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow hover:bg-blue-700 transition">
+            Discover Our Services
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    </div>
+    
+    <script>
+      console.log("about page");
+    </script>
+    <script>
+      console.log("second about page script");
+    </script>
+  </body>
+</html>
