@@ -23,14 +23,13 @@ Smart Contact Manager is a full-stack web application built with Java and Spring
 
 ## 📁 Repository Structure  
 /src
- ├─ main/java/... (backend source code)
- ├─ main/resources/... (application config, static assets)
-/ .mvn/ wrapper files
-/ node_modules/ (if using frontend tooling)
-/ package.json (frontend dependencies)
-/ pom.xml (backend build config)
-/ tailwind.config.js (frontend styling config)
-
+  ├─ main/java/...         (backend source code)
+  ├─ main/resources/...    (application config, static assets)
+/.mvn/                     (wrapper files)
+/node_modules/             (if using frontend tooling)
+/package.json              (frontend dependencies)
+/pom.xml                   (backend build config)
+/tailwind.config.js        (frontend styling config)
 
 ## 🛠 Getting Started  
 1. Clone the repository:  
