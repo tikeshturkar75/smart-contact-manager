@@ -70,10 +70,12 @@ mvn package
 - Improve UI: add pagination, filters, bulk actions
 
 ## 🧪 Testing
-(If you have tests) Run backend tests:
+- (If you have tests) Run backend tests:
+```bash
 mvn test
-For UI testing: you may integrate Selenium/Playwright or other frameworks.
-Manual testing: check all CRUD operations, user authentication & authorization, UI responsiveness, error handling.
+```
+- For UI testing: you may integrate Selenium/Playwright or other frameworks.
+- Manual testing: check all CRUD operations, user authentication & authorization, UI responsiveness, error handling.
 
 ## 📦 Deployment
 - Ensure you’ve updated configuration for production environment (e.g., DB URL, credentials, port)
