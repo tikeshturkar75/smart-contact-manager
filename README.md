@@ -45,14 +45,19 @@ Smart Contact Manager is a full-stack web application built with Java and Spring
 - spring.jpa.hibernate.ddl-auto=update
 
 3. Build and run the application:
+```bash
   ./mvnw spring-boot:run    # for Unix/mac  
   mvnw.cmd spring-boot:run   # for Windows
-
+```
 Or build with mvn package and run the jar:
-mvn package  
+mvn package 
+```bash 
 - java -jar target/smart-contact-manager-0.0.1-SNAPSHOT.jar  
-
-4. Visit in browser: http://localhost:8080 (or your configured port)
+```
+4. Visit in browser: 
+```
+http://localhost:8080 (or your configured port)
+```
 5. Use the UI to register a user, login, and start managing contacts.
 
 ## 👤 Usage
