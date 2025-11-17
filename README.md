@@ -52,7 +52,7 @@ Smart Contact Manager is a full-stack web application built with Java and Spring
 Or build with mvn package and run the jar:
 mvn package 
 ```bash 
-- java -jar target/smart-contact-manager-0.0.1-SNAPSHOT.jar  
+java -jar target/smart-contact-manager-0.0.1-SNAPSHOT.jar  
 ```
 4. Visit in browser: 
 ```
